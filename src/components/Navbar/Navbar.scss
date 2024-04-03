@@ -1,0 +1,98 @@
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: white;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    &.scrolled {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        background-color: white;
+        margin-bottom: 20px;
+        -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .center {
+            font-size: 30px;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .icon {
+                display: flex;
+                gap: 15px;
+                color: #777;
+                cursor: pointer;
+
+                .cartIcon {
+                    position: relative;
+                    span {
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background-color: #2879fe;
+                        color: white;
+                        position: absolute;
+                        right: -10px;
+                        top: -10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                .searchIcon {
+                    position: relative;
+                }
+            }
+        }
+    }
+    .overlay-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; // Điều chỉnh kích thước để không bao gồm giỏ hàng
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // Nền đen mờ
+        z-index: 100;
+        opacity: 0; // Ẩn ban đầu
+        pointer-events: none; // Tránh xung đột với sự kiện click
+        transition:
+            opacity 0.3s ease-in,
+            pointer-events 0.5s ease-out; // Thêm transition cho opacity và pointer-events
+        &.open {
+            opacity: 1; // Hiển thị overlay khi giỏ hàng mở
+            pointer-events: auto; // Bật sự kiện click khi overlay được hiển thị
+        }
+    }
+}

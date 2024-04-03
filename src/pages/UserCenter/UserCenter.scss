@@ -1,0 +1,40 @@
+.user-bar {
+    max-width: 1200px;
+    display: flex;
+    padding-top: 80px;
+    gap: 15px;
+    margin: auto;
+    .left {
+        flex: 1;
+
+        height: 70vh;
+        top: 20%;
+
+        .filterItem {
+            margin-bottom: 30px;
+
+            h2 {
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            .inputItem {
+                margin-bottom: 10px;
+                cursor: pointer;
+                label {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .right {
+        flex: 3;
+
+        .catImg {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 50px;
+        }
+    }
+}

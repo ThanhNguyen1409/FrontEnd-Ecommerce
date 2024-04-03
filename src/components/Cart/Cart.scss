@@ -1,0 +1,100 @@
+.cart {
+    .empty-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        color: gray;
+        h1 {
+            color: gray;
+            font-weight: 400;
+            font-size: 24px;
+            margin: 0;
+        }
+        .icon {
+            cursor: pointer;
+            svg {
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+
+        img {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            h1 {
+                font-size: 15px;
+                font-weight: 500;
+            }
+            p {
+                color: gray;
+                margin-bottom: 10px 0px;
+                font-size: 14px;
+            }
+            .quantity {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                input {
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    border: none;
+                }
+                button {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+            .prices {
+                color: #2879fe;
+            }
+        }
+        .deleteIcon {
+            color: red;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+    .total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .link {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .reset {
+        color: red;
+        font-size: 12px;
+        cursor: pointer;
+    }
+}

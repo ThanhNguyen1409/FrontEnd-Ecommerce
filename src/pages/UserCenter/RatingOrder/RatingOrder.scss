@@ -1,0 +1,28 @@
+.container {
+    .main-content {
+        .product-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+            img {
+                width: 80px;
+                height: 100px;
+                object-fit: cover;
+            }
+            h3 {
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+        .rating-box {
+            padding-bottom: 15px;
+            span {
+                line-height: 22px;
+            }
+            .text-area {
+                margin: 10px 0 15px 0;
+            }
+        }
+    }
+}

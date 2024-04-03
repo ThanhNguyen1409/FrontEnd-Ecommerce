@@ -1,0 +1,88 @@
+.products {
+    padding: 30px 50px;
+    display: flex;
+    padding-top: 80px;
+
+    .overlay-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; // Điều chỉnh kích thước để không bao gồm giỏ hàng
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // Nền đen mờ
+        z-index: 100;
+        opacity: 0; // Ẩn ban đầu
+        pointer-events: none; // Tránh xung đột với sự kiện click
+        transition:
+            opacity 0.3s ease-in,
+            pointer-events 0.5s ease-out; // Thêm transition cho opacity và pointer-events
+        &.open {
+            opacity: 1; // Hiển thị overlay khi giỏ hàng mở
+            pointer-events: auto; // Bật sự kiện click khi overlay được hiển thị
+        }
+    }
+
+    .filter-bar {
+        position: fixed;
+        top: 0;
+        right: -100%; // Đặt giỏ hàng ẩn bên phải
+        width: 400px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.5s ease-out;
+        overflow-y: scroll;
+        z-index: 200;
+        padding: 20px;
+
+        h4 {
+            margin-bottom: 25px;
+        }
+        &.open {
+            right: 0;
+        }
+        .close-icon {
+            float: right;
+            cursor: pointer;
+            margin-bottom: 30px;
+            svg {
+                font-size: 1.7rem;
+            }
+        }
+
+        .filter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0 15px 0;
+            .checkbox-item {
+                border: 0.5px solid;
+                padding: 8px;
+                cursor: pointer;
+                position: relative;
+                input {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+
+                input[type="checkbox"]:checked {
+                    opacity: 1;
+                }
+                label {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .main-content {
+        flex: 3;
+
+        .catImg {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-bottom: 50px;
+        }
+    }
+}

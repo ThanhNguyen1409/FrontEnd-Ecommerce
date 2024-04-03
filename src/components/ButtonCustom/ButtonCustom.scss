@@ -1,0 +1,52 @@
+.button-ec {
+    .button-custom {
+        --color: #560bad;
+        font-family: inherit !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 200px;
+        line-height: 2.5em !important;
+        gap: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--color);
+        transition: color 0.5s;
+        z-index: 1;
+        border-radius: 6px !important;
+        font-weight: 500;
+        color: var(--color) !important;
+        cursor: pointer !important;
+    }
+
+    .button-custom:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--color);
+        height: 150px;
+        width: 250px;
+        border-radius: 50%;
+    }
+
+    .button-custom:hover {
+        color: #fff !important;
+    }
+
+    .button-custom:before {
+        top: 100%;
+        left: 100%;
+        transition: all 0.7s;
+    }
+
+    .button-custom:hover:before {
+        top: -30px;
+        left: -30px;
+    }
+
+    .button-custom:active:before {
+        background: #3a0ca3;
+        transition: background 0s;
+    }
+}
